@@ -50,7 +50,6 @@ class Supplier
     values = [id]
     supplier = SqlRunner.run(sql, values)
    return Supplier.new( supplier.first )
-
   end
 
 end

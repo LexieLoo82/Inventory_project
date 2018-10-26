@@ -3,6 +3,7 @@ require_relative('../models/supplier')
 require( 'pry-byebug' )
 
 Supplier.delete_all()
+Product.delete_all()
 
 supplier1 = Supplier.new({"name" => "Burts Bees", "distance" => 24})
 supplier2 = Supplier.new({"name" => "HumbleStuff", "distance" => 24})
@@ -17,10 +18,21 @@ supplier4.save()
 supplier5.save()
 supplier6.save()
 
-supplier1.distance = 350
-supplier1.update
+product1 = Product.new({
+  "name" => "Bees Wax Wraps",
+  "type" => "kitchen",
+  "qty"=> 5,
+  "cost_price" => 10,
+  "sell_price" => 25,
+  "supplier_id" => supplier2.id
+  })
+product1.save
 
-supplier1.delete()
+product1.type = "storage"
+product1.update
+
+
+
 
 binding.pry
 nil

@@ -15,5 +15,5 @@ CREATE TABLE products (
   qty INT4 NOT NULL,
   cost_price INT4,
   sell_price INT4,
-  supplier_id INT4 REFERENCES suppliers(id)
+  supplier_id INT4 REFERENCES suppliers(id) ON DELETE CASCADE
 );
