@@ -1,5 +1,4 @@
 
-
 <form method="post" action="/products">
 <ul>
 
@@ -11,6 +10,12 @@
 
   <li><label for="qty">Age: </label>
   <input id="qty" type="text" name="qty" /></li>
+
+  <li><label for="House">Select a House:</label>
+  <select id="House" name="house_id">
+    <% for supplier in @suppliers%>
+    <option value = <%=supplier.id%> > <%= supplier.name %> </option>
+    <%end%>
 
 
   </select></li>
