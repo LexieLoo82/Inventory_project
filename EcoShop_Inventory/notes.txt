@@ -1,4 +1,4 @@
-
+######NEW.ERB########
 <form method="post" action="/products">
 <ul>
 
@@ -23,3 +23,34 @@
   <input type="submit" value="add"/>
 </ul>
 </form>
+
+
+#####INDEX.ERB######
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<h2>Column oriented table</h2>
+
+<div class="Rtable Rtable--7cols">
+<% for product in @products  %>
+  <div style="order:1;" class="Rtable-cell"><h3>Name</h3></div>
+  <div style="order:2;" class="Rtable-cell"><%= product.name() %></div>
+
+  <div style="order:1;" class="Rtable-cell"><h3>Type</h3></div>
+  <div style="order:2;" class="Rtable-cell"><%= product.type() %></div>
+
+
+  <div style="order:1;" class="Rtable-cell"><h3>Qty</h3></div>
+  <div style="order:2;" class="Rtable-cell"><%= product.qty() %></div>
+
+  <div style="order:1;" class="Rtable-cell"><h3>Cost Price</h3></div>
+  <div style="order:2;" class="Rtable-cell">£<%= product.cost_price() %></div>
+
+  <div style="order:1;" class="Rtable-cell"><h3>Sale Price</h3></div>
+  <div style="order:2;" class="Rtable-cell">£<%= product.sell_price() %></div>
+
+  <div style="order:1;" class="Rtable-cell"><h3>Supplier</h3></div>
+  <div style="order:2;" class="Rtable-cell"><%= product.supplier.name() %></div>
+<%end%>
+</div>
