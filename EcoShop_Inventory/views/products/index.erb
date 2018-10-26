@@ -1,0 +1,19 @@
+<h1> products </h1>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+  <div class="grid">
+
+  <% for product in @products  %>
+  <div class="grid-row grid-row-sm">
+  <div class="cell"><p>Name: <%= product.name() %></p></div>
+  <div class="cell"><p>Type: <%= product.type() %></p></div>
+  <div class="cell"><p>Qty: <%= product.qty() %></p></div>
+  <div class="cell"><p>Cost Price: £<%= product.cost_price() %></p></div>
+  <div class="cell"><p>Sale Price: £<%= product.sell_price() %></p></div>
+  <div class="cell"><p>Supplier: <%= product.supplier.name() %></p></div>
+ </div>
+
+
+  <% end %>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+.grid {
+border: solid 1px mediumaquamarine;
+}
+
+.grid-row{
+  display: flex;
+  flex-direction: column;
+}
+
+.cell{
+  flex: 1;
+  padding: 10px;
+  border: solid 1px mediumaquamarine;
+
+}
