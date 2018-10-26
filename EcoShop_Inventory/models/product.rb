@@ -61,7 +61,16 @@ def self.find( id )
   values = [id]
   product = SqlRunner.run(sql, values)
  return Product.new( product.first )
-
 end
+
+def supplier()
+  sql = "SELECT * FROM suppliers WHERE suppliers.id = $1"
+  values = [@supplier_id]
+  suppliers = SqlRunner.run( sql, values )
+  result = suppliers.map{ |supplier| Supplier.new(supplier)}
+  return result[0]
+end
+
+
 
 end
