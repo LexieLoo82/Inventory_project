@@ -1,4 +1,5 @@
 <h1> products </h1>
+<p><a href="/products/new">Add Product</a></p>
 <% for product in @products  %>
 <p>Name: <%= product.name() %></p>
 <p>Type: <%= product.type() %></p>
@@ -8,6 +9,10 @@
 <p>Supplier: <%= product.supplier.name() %></p>
 <p><a href="/products/<%=product.id%>">See Product</a></p>
 <p><a href="/products/edit/<%=product.id%>">Edit Product</a></p>
+
+<form method="post" action="/products/<%= product.id %>/sell">
+     <input type="submit" value="Sell One"/>
+   </form>
 
 
 <% end %>

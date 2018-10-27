@@ -71,8 +71,10 @@ def supplier()
   return result[0]
 end
 
-def sell_product()
- @quantity -= 1
-end
+# def sell_product()
+#   sold_item = @product.find('id')
+#   sold_item.quantity - 1
+#   sold_item.update()
+# end
 
 end
