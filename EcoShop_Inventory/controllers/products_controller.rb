@@ -11,7 +11,7 @@ get '/products' do
 end
 
 get '/products/new' do
-  @supplies = Supplier.all()
+  @suppliers = Supplier.all()
 erb (:"products/new")
 end
 
