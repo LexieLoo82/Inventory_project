@@ -21,7 +21,7 @@ supplier6.save()
 product1 = Product.new({
   "name" => "Bees Wax Wraps",
   "type" => "kitchen",
-  "qty"=> 5,
+  "quantity" => 5,
   "cost_price" => 10,
   "sell_price" => 25,
   "supplier_id" => supplier2.id

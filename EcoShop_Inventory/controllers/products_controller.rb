@@ -12,7 +12,7 @@ end
 
 get '/products/new' do
   @suppliers = Supplier.all()
-erb (:"products/new")
+  erb (:"products/new")
 end
 
 post '/products' do
@@ -22,14 +22,14 @@ post '/products' do
 end
 
 get '/products/:id' do
- id = params['id']
- @product = Product.find(id)
- erb(:"products/show")
+  id = params['id']
+  @product = Product.find(id)
+  erb(:"products/show")
 end
 
 get '/products/edit/:id' do
   id = params['id']
   @suppliers = Supplier.all()
   @product = Product.find(id)
- erb (:"products/edit")
+  erb (:"products/edit")
 end

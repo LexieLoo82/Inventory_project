@@ -8,8 +8,8 @@
   <li><label for="type">Last Name: </label>
   <input id="type" type="text" name="type" /></li>
 
-  <li><label for="qty">Age: </label>
-  <input id="qty" type="text" name="qty" /></li>
+  <li><label for="quantity">Age: </label>
+  <input id="quantity" type="text" name="quantity" /></li>
 
   <li><label for="House">Select a House:</label>
   <select id="House" name="house_id">
@@ -41,8 +41,8 @@
   <div style="order:2;" class="Rtable-cell"><%= product.type() %></div>
 
 
-  <div style="order:1;" class="Rtable-cell"><h3>Qty</h3></div>
-  <div style="order:2;" class="Rtable-cell"><%= product.qty() %></div>
+  <div style="order:1;" class="Rtable-cell"><h3>quantity</h3></div>
+  <div style="order:2;" class="Rtable-cell"><%= product.quantity() %></div>
 
   <div style="order:1;" class="Rtable-cell"><h3>Cost Price</h3></div>
   <div style="order:2;" class="Rtable-cell">£<%= product.cost_price() %></div>

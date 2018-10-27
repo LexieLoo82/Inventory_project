@@ -3,13 +3,13 @@ require_relative('../db/sql_runner')
 class Product
 
   attr_reader :id
-  attr_accessor :name, :type, :qty, :cost_price, :sell_price, :supplier_id
+  attr_accessor :name, :type, :quantity, :cost_price, :sell_price, :supplier_id
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @type = options['type']
-    @qty = options['qty']
+    @quantity = options['quantity']
     @cost_price = options['cost_price']
     @sell_price = options['sell_price']
     @supplier_id = options['supplier_id'].to_i
@@ -19,14 +19,14 @@ class Product
     sql = "INSERT INTO products (
     name,
     type,
-    qty,
+    quantity,
     cost_price,
     sell_price,
     supplier_id
   )
   VALUES ( $1, $2, $3, $4, $5, $6)
   RETURNING id"
-  values = [@name, @type, @qty, @cost_price, @sell_price, @supplier_id]
+  values = [@name, @type, @quantity, @cost_price, @sell_price, @supplier_id]
   results = SqlRunner.run(sql, values)
   @id = results.first()['id'].to_i
 end
@@ -42,7 +42,7 @@ def self.delete_all()
   SqlRunner.run( sql )
 end
 
-def delete
+def self.delete(id)
   sql = "DELETE FROM products WHERE id = $1"
   values = [@id]
   SqlRunner.run( sql, values )
@@ -50,9 +50,9 @@ end
 
 def update
   sql = "UPDATE products
-  SET (name, type, qty, cost_price, sell_price, supplier_id) = ($1, $2, $3, $4, $5, $6)
+  SET (name, type, quantity, cost_price, sell_price, supplier_id) = ($1, $2, $3, $4, $5, $6)
   WHERE id = $7"
-  values = [@name, @type, @qty, @cost_price, @sell_price, @supplier_id, @id]
+  values = [@name, @type, @quantity, @cost_price, @sell_price, @supplier_id, @id]
   SqlRunner.run(sql, values)
 end
 
@@ -71,6 +71,8 @@ def supplier()
   return result[0]
 end
 
-
+def sell_product()
+ @quantity -= 1
+end
 
 end
