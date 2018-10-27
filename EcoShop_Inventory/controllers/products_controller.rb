@@ -26,3 +26,10 @@ get '/products/:id' do
  @product = Product.find(id)
  erb(:"products/show")
 end
+
+get '/products/edit/:id' do
+  id = params['id']
+  @suppliers = Supplier.all()
+  @product = Product.find(id)
+ erb (:"products/edit")
+end
