@@ -1,36 +1,11 @@
-######NEW.ERB########
-<form method="post" action="/products">
-<ul>
+####Added () into index page of suppliers - to get rid of change in color text.
 
-  <li><label for="name">Name: </label>
-  <input id="name" type="text" name="name" /></li>
-
-  <li><label for="type">Last Name: </label>
-  <input id="type" type="text" name="type" /></li>
-
-  <li><label for="quantity">Age: </label>
-  <input id="quantity" type="text" name="quantity" /></li>
-
-  <li><label for="House">Select a House:</label>
-  <select id="House" name="house_id">
-    <% for supplier in @suppliers%>
-    <option value = <%=supplier.id%> > <%= supplier.name %> </option>
-    <%end%>
-
-
-  </select></li>
-
-  <input type="submit" value="add"/>
-</ul>
-</form>
 
 
 #####INDEX.ERB######
 
 <link rel="stylesheet" type="text/css" href="style.css">
 
-
-<h2>Column oriented table</h2>
 
 <div class="Rtable Rtable--7cols">
 <% for product in @products  %>
