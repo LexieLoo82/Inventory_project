@@ -23,6 +23,7 @@ end
 get '/suppliers/:id' do
   id = params['id']
   @supplier = Supplier.find(id)
+  @supplier.products()
   erb(:"suppliers/show")
 end
 

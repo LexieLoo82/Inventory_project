@@ -1,6 +1,4 @@
-<ul>
-  <li><a href="/">Home</a></li><li><a href="/suppliers">Suppliers</a></li>
-</ul>
+<a href="/">home</a>   <a href="/suppliers">Suppliers</a>
 
 <h1> products </h1>
 <p><a href="/products/new">Add Product</a></p>
@@ -8,9 +6,6 @@
 <p>Name: <%= product.name() %></p>
 <p>Type: <%= product.type() %></p>
 <p>quantity: <%= product.quantity() %></p>
-<p>Cost Price: £<%= product.cost_price() %></p>
-<p>Sale Price: £<%= product.sell_price() %></p>
-<p>Supplier: <%= product.supplier.name() %></p>
 <p><a href="/products/<%=product.id%>">See Product</a></p>
 <p><a href="/products/edit/<%=product.id%>">Edit Product</a></p>
 
