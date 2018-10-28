@@ -3,4 +3,7 @@
 
 
 <p>Name: <%= @supplier.name %></p>
-<p>Type: <%= @supplier.distance %></p>
+<p>Distance: <%= @supplier.distance %></p>
+
+
+<a href="/suppliers/products/<%=@supplier.id%>/">see this supplier's products</a>

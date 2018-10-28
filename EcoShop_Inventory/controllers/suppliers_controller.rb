@@ -32,7 +32,9 @@ get '/suppliers/edit/:id' do
   erb (:"suppliers/edit")
 end
 
-get '/suppliers/:id/products' do
-  id = params['id']
-  @supplier = Supplier.products(id)
-end
+# # ßget help with this
+# get '/suppliers/products/:id' do
+#   id = params['id']
+#   @supplier = Supplier.products()
+#   erb(:"suppliers/products")
+# end
