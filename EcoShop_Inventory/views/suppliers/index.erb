@@ -5,13 +5,20 @@
 </nav>
 
 <h1> Suppliers </h1>
-
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th>Distance</th>
+    </tr>
 <% for supplier in @suppliers %>
-<p>Name: <%= supplier.name() %></p>
-<p>Distance: <%= supplier.distance() %></p>
-
-
-<p><a href="/suppliers/<%=supplier.id()%>">See Supplier</a></p>
-<p><a href="/suppliers/edit/<%=supplier.id%>">Edit Supplier</a></p>
-
+<tr>
+  <td><p><%= supplier.name() %></p></td>
+  <td>|</td>
+  <td><p> <%= supplier.distance() %>km</p></td>
+  <td>|</td>
+  <td><a href="/suppliers/<%=supplier.id()%>">See Supplier</a></td>
+  <td><a href="/suppliers/edit/<%=supplier.id%>">Edit Supplier</a></td>
+</tr>
 <% end %>
+</table>
