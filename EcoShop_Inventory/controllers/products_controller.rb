@@ -34,6 +34,8 @@ get '/products/edit/:id' do
   erb (:"products/edit")
 end
 
+
+
 # post "/products/:id/sell" do
 #   id = params['id']
 #   @product = Product.find(id)

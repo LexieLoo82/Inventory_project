@@ -52,4 +52,12 @@ class Supplier
    return Supplier.new( supplier.first )
   end
 
+  def products()
+    sql = "SELECT * FROM products WHERE supplier_id = $1"
+    values = [@id]
+    products_return = SqlRunner.run(sql, values)
+    products = products_return.map { |product| Product.new(product) }
+    return products
+  end
+
 end

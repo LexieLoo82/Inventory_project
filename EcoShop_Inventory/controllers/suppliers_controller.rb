@@ -31,3 +31,8 @@ get '/suppliers/edit/:id' do
   @supplier = Supplier.find(id)
   erb (:"suppliers/edit")
 end
+
+get '/suppliers/:id/products' do
+  id = params['id']
+  @supplier = Supplier.products(id)
+end
