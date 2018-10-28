@@ -6,30 +6,30 @@
 
 <form method="post" action="/products/<%= @product.id %>">
 
+<ul>
+<li> <label for="name">Name: </label>
+  <input id="name" type="text" value= "<%= @product.name %>" name="name" /></li>
 
-  <label for="name">Name: </label>
-  <input id="name" type="text" value= "<%= @product.name %>" name="name" />
+  <li><label for="type">Type: </label>
+  <input id="type" type="text" value= "<%= @product.type %>" name="type" /></li>
 
-  <label for="type">Type: </label>
-  <input id="type" type="text" value= "<%= @product.type %>" name="type" />
+  <li><label for="quantity">Quantity: </label>
+  <input id="quantity" type="text" value="<%= @product.quantity %>" name="quantity" /></li>
 
-  <label for="quantity">quantity: </label>
-  <input id="quantity" type="text" value="<%= @product.quantity %>" name="quantity" />
+  <li><label for="cost_price">Cost Price: </label>
+  <input id="cost_price" type="text" value="<%= @product.cost_price %>" name="cost_price" /></li>
 
-  <label for="cost_price">Cost Price: </label>
-  <input id="cost_price" type="text" value="<%= @product.cost_price %>" name="cost_price" />
+  <li><label for="sell_price">Sale Price: </label>
+  <input id="sell_price" type="text" value="<%= @product.sell_price %>" name="sell_price" /></li>
 
-  <label for="sell_price">Sale Price: </label>
-  <input id="sell_price" type="text" value="<%= @product.sell_price %>" name="sell_price" />
-
-  <label for="supplier">Select a Supplier:</label>
+  <li><label for="supplier">Select a Supplier:</label>
   <select id="supplier" name="supplier_id">
 
     <% for supplier in @suppliers %>
     <option value=<%= supplier.id %>> <%= supplier.name %> </option>
     <%end%>
-  </select>
+  </select></li>
 
   <input type="submit" value="Submit Changes"/>
-
+</ul>
 </form>
