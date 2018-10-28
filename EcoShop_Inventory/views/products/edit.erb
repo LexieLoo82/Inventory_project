@@ -24,9 +24,8 @@
 
   <li><label for="supplier">Select a Supplier:</label>
   <select id="supplier" name="supplier_id">
-
     <% for supplier in @suppliers %>
-    <option value=<%= suppliers.id %>> <%= suppliers.name %> </option>
+    <option value=<%= supplier.id %>> <%= supplier.name %> </option>
     <%end%>
   </select></li>
 

@@ -29,13 +29,13 @@ end
 
 get '/products/edit/:id' do
   id = params['id']
-  @suppliers = Supplier.all()
+  @supplier = Supplier.all()
   @product = Product.find(id)
   erb (:"products/edit")
 end
 
 post '/products/:id' do
-Products.new(params).update()
+Product.new(params).update()
 redirect to "/products"
 end
 
