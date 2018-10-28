@@ -19,3 +19,15 @@ post '/suppliers' do
   @supplier.save()
   redirect to'/suppliers'
 end
+
+get '/suppliers/:id' do
+  id = params['id']
+  @supplier = Supplier.find(id)
+  erb(:"suppliers/show")
+end
+
+get '/suppliers/edit/:id' do
+  id = params['id']
+  @supplier = Supplier.find(id)
+  erb (:"suppliers/edit")
+end

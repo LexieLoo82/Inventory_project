@@ -1,0 +1,15 @@
+<p><a href="/">home</a></p>
+
+<form method="post" action="/suppliers/<%= @supplier.id %>">
+
+
+  <label for="name">Name: </label>
+  <input id="name" type="text" value="<%= @supplier.name %>" name="name" />
+
+  <label for="distance">Distance: </label>
+  <input id="distance" type="text" value="<%= @supplier.distance %>"name="distance" />
+
+
+  <input type="submit" value="Submit Changes"/>
+
+</form>
