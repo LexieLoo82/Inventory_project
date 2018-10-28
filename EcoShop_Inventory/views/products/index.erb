@@ -6,17 +6,28 @@
 
 <h1> products </h1>
 <p><a href="/products/new">Add Product</a></p>
-
+<table>
+  <tr>
+  <th>Name</th>
+  <th></th>
+  <th>Type</th>
+    <th></th>
+  <th>Quantity</th>
+  </tr>
 <% for product in @products  %>
-<p>Name: <%= product.name() %></p>
-<p>Type: <%= product.type() %></p>
-<p>quantity: <%= product.quantity() %></p>
-<p><a href="/products/<%=product.id%>">See Product</a></p>
-<p><a href="/products/edit/<%=product.id%>">Edit Product</a></p>
-
-<form method="post" action="/products/<%= product.id %>/sell">
+<tr>
+<td><p><%= product.name() %></p></td>
+<td>|</td>
+<td><p><%= product.type() %></p></td>
+<td>|</td>
+<td><p> <%= product.quantity() %></p></td>
+<td>|</td>
+<td><p><a href="/products/<%=product.id%>">See Product</a></p></td>
+<td>|</td>
+<td><p><a href="/products/edit/<%=product.id%>">Edit Product</a></p></td>
+<td>|</td>
+<td><form method="post" action="/products/<%= product.id %>/sell">
      <input type="submit" value="Sell One"/>
-</form>
-
-
+</form></td>
 <% end %>
+</table>
