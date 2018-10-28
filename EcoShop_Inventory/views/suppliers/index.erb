@@ -1,8 +1,12 @@
+<a href="/">home</a>   <a href="/products">Products</a>
+
 <h1> Suppliers </h1>
+
 <% for supplier in @suppliers %>
 <p>Name: <%= supplier.name() %></p>
 <p>Distance: <%= supplier.distance() %></p>
-</div>
-<% end %>
 
-<p><a href="/">home</a></p>
+<p><a href="/suppliers/<%=supplier.id%>">See Supplier</a></p>
+<p><a href="/suppliers/edit/<%=supplier.id%>">Edit Supplier</a></p>
+
+<% end %>
