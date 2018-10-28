@@ -84,6 +84,9 @@ def low_stock
   end
 end
 
+def check_mark_up
+
+end
 
 
 

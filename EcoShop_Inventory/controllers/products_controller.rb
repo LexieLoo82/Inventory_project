@@ -34,6 +34,10 @@ get '/products/edit/:id' do
   erb (:"products/edit")
 end
 
+post '/products/:id' do
+Products.new(params).update()
+redirect to "/products"
+end
 
 
 # post "/products/:id/sell" do

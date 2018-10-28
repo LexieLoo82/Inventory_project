@@ -33,4 +33,8 @@ class TestSupplier < MiniTest::Test
       assert_equal("Out of Stock!", @product.low_stock)
     end
 
+    def test_mark_up()
+      assert_equal(15, @product.check_mark_up)
+    end
+
   end

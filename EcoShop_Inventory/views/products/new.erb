@@ -1,32 +1,27 @@
+<nav>
 <ul>
   <li><a href="/">Home</a></li><li><a href="/products">Products</a></li><li><a href="/suppliers">Suppliers</a></li>
 </ul>
+</nav>
 
+<div class="forms">
 <form method="post" action="/products">
-
-
   <label for="name">Name: </label>
   <input id="name" type="text" name="name" />
-
   <label for="type">Type: </label>
   <input id="type" type="text" name="type" />
-
   <label for="quantity">quantity: </label>
   <input id="quantity" type="text" name="quantity" />
-
   <label for="cost_price">Cost Price: </label>
   <input id="cost_price" type="text" name="cost_price" />
-
   <label for="sell_price">Sale Price: </label>
   <input id="sell_price" type="text" name="sell_price" />
-
   <label for="supplier">Select a Supplier:</label>
   <select id="supplier" name="supplier_id">
     <% for supplier in @suppliers %>
     <option value=<%= supplier.id %>> <%= supplier.name %> </option>
     <%end%>
   </select>
-
   <input type="submit" value="add"/>
-
 </form>
+</div>

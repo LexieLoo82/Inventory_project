@@ -1,7 +1,12 @@
-<a href="/">home</a>   <a href="/suppliers">Suppliers</a>
+<nav>
+<ul>
+  <li><a href="/">Home</a></li><li><a href="/products">Products</a></li><li><a href="/suppliers">Suppliers</a></li>
+</ul>
+</nav>
 
 <h1> products </h1>
 <p><a href="/products/new">Add Product</a></p>
+
 <% for product in @products  %>
 <p>Name: <%= product.name() %></p>
 <p>Type: <%= product.type() %></p>
@@ -11,7 +16,7 @@
 
 <form method="post" action="/products/<%= product.id %>/sell">
      <input type="submit" value="Sell One"/>
-   </form>
+</form>
 
 
 <% end %>
