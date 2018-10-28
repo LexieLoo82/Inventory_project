@@ -8,7 +8,7 @@ class TestSupplier < MiniTest::Test
       "id" => "1",
       "name" => "Bees Wax Wraps",
       "type" => "kitchen",
-      "quantity" => 5,
+      "quantity" => 0,
       "cost_price" => 10,
       "sell_price" => 25,
       "supplier_id" => 5}
@@ -26,6 +26,11 @@ class TestSupplier < MiniTest::Test
 
     def test_sell_product()
       assert_equal(4, @product.sell_product)
+    end
+
+
+    def test_low_stock()
+      assert_equal("Out of Stock!", @product.low_stock)
     end
 
   end

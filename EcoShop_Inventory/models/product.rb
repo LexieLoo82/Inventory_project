@@ -71,10 +71,20 @@ def supplier()
   return result[0]
 end
 
+## get help with this
 # def sell_product()
 #   sold_item = @product.find('id')
 #   sold_item.quantity - 1
 #   sold_item.update()
 # end
+
+def low_stock
+  if quantity < 6
+    p "Low Stock"
+  end
+end
+
+
+
 
 end
