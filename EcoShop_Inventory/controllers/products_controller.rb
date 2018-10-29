@@ -29,20 +29,21 @@ end
 
 get '/products/edit/:id' do
   id = params['id']
-  @supplier = Supplier.all()
+  @suppliers = Supplier.all()
   @product = Product.find(id)
   erb (:"products/edit")
+  end
+
+  post '/products/:id' do
+  Product.new(params).update()
+  redirect to "/products"
+  end
+
+
+post "/products/:id/sell" do
+  id = params['id']
+  @product = Product.find(id)
+  @product.sell_product()
+  @product.update()
+   redirect to "/products"
 end
-
-post '/products/:id' do
-Product.new(params).update()
-redirect to "/products"
-end
-
-
-# post "/products/:id/sell" do
-#   id = params['id']
-#   @product = Product.find(id)
-#   @product.sell_product()
-#    redirect to "/products"
-# end

@@ -23,11 +23,11 @@
   <input id="sell_price" type="text" value="<%= @product.sell_price %>" name="sell_price" /></li>
 
   <li><label for="supplier">Select a Supplier:</label>
-  <select id="supplier" name="supplier_id">
+ <select id="supplier" name="supplier_id">
     <% for supplier in @suppliers %>
-    <option value=<%= supplier.id %>> <%= supplier.name %> </option>
-    <%end%>
-  </select></li>
+   <option value=<%= supplier.id %>> <%= supplier.name %> </option>
+   <%end%>
+ </select></li>
 
   <input type="submit" value="Submit Changes"/>
 </ul>

@@ -9,7 +9,7 @@ class Product
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @type = options['type']
-    @quantity = options['quantity']
+    @quantity = options['quantity'].to_i
     @cost_price = options['cost_price']
     @sell_price = options['sell_price']
     @supplier_id = options['supplier_id'].to_i
@@ -71,22 +71,21 @@ def supplier()
   return result[0]
 end
 
-## get help with this
-# def sell_product()
-#   sold_item = @product.find('id')
-#   sold_item.quantity - 1
-#   sold_item.update()
+# # get help with this
+def sell_product()
+  sold_item = @product.find(id)
+  sold_item.quantity -= 1
+end
+# #
+# def low_stock
+#   if quantity < 6
+#     p "Low Stock"
+#   end
 # end
-
-def low_stock
-  if quantity < 6
-    p "Low Stock"
-  end
-end
-
-def check_mark_up
-
-end
+#
+# def check_mark_up
+#
+# end
 
 
 
