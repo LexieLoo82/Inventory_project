@@ -39,7 +39,6 @@ get '/products/edit/:id' do
   redirect to "/products"
   end
 
-
 post "/products/:id/sell" do
   id = params['id']
   @product = Product.find(id)

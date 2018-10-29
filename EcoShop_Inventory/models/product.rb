@@ -10,8 +10,8 @@ class Product
     @name = options['name']
     @type = options['type']
     @quantity = options['quantity'].to_i
-    @cost_price = options['cost_price']
-    @sell_price = options['sell_price']
+    @cost_price = options['cost_price'].to_i
+    @sell_price = options['sell_price'].to_i
     @supplier_id = options['supplier_id'].to_i
   end
 
@@ -76,7 +76,7 @@ def sell_product()
 end
 #
 def low_stock()
-  if quantity <3 && quantity >=1
+  if quantity <4 && quantity >1
     return "Low Stock"
   end
 end
@@ -87,10 +87,11 @@ def no_stock()
   end
 end
 
-#
-# def check_mark_up
-#
-# end
+
+def mark_up
+result = sell_price - cost_price
+return result
+end
 
 
 
