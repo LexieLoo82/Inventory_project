@@ -71,17 +71,22 @@ def supplier()
   return result[0]
 end
 
-# # get help with this
 def sell_product()
-  
   @quantity -= 1
 end
-# #
-# def low_stock
-#   if quantity < 6
-#     p "Low Stock"
-#   end
-# end
+#
+def low_stock()
+  if quantity <3 && quantity >=1
+    return "Low Stock"
+  end
+end
+
+def no_stock()
+  if quantity == 0
+    return "Out of Stock"
+  end
+end
+
 #
 # def check_mark_up
 #

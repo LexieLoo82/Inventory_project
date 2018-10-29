@@ -10,17 +10,19 @@
   <tr>
   <th>Name</th>
   <th></th>
-  <th>Type</th>
-    <th></th>
   <th>Quantity</th>
+  <th></th>
+  <th></th>
   </tr>
 <% for product in @products  %>
 <tr>
 <td><p><%= product.name() %></p></td>
 <td>|</td>
 <td><p> <%= product.quantity() %></p></td>
+<td><div class="low_stock"><p> <%= product.low_stock %></p></div></td>
 <td>|</td>
+<td><div class="no_stock"><p><%= product.no_stock %></p></div></td>
 <td><p><a href="/products/<%=product.id%>">See Product</a></p></td>
-<td>|</td>
+<td></td>
 <% end %>
 </table>

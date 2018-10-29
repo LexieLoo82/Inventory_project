@@ -7,10 +7,16 @@
 
 <p>Name: <%= @product.name %></p>
 <p>Type: <%= @product.type %></p>
-<p>quantity: <%= @product.quantity %></p>
+<p>Quantity: <%= @product.quantity %></p>
 <p>Cost Price: £<%= @product.cost_price %></p>
 <p>Sale Price: £<%= @product.sell_price %></p>
 <p>Supplier: <%= @product.supplier.name %></p>
+<div class="low_stock">
+<p> <%= @product.low_stock %></p>
+</div>
+<div class="no_stock">
+<p> <%= @product.no_stock %></p>
+</div>
 <p><a href="/products/edit/<%=@product.id%>">Edit Product</a></p>
 
 <form method="post" action="/products/<%= @product.id%>/sell">
