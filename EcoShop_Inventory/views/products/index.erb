@@ -18,16 +18,9 @@
 <tr>
 <td><p><%= product.name() %></p></td>
 <td>|</td>
-<td><p><%= product.type() %></p></td>
-<td>|</td>
 <td><p> <%= product.quantity() %></p></td>
 <td>|</td>
 <td><p><a href="/products/<%=product.id%>">See Product</a></p></td>
 <td>|</td>
-<td><p><a href="/products/edit/<%=product.id%>">Edit Product</a></p></td>
-<td>|</td>
-<td><form method="post" action="/products/<%= product.id %>/sell">
-     <input type="submit" value="Sell One"/>
-</form></td>
 <% end %>
 </table>

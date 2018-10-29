@@ -11,3 +11,8 @@
 <p>Cost Price: £<%= @product.cost_price %></p>
 <p>Sale Price: £<%= @product.sell_price %></p>
 <p>Supplier: <%= @product.supplier.name %></p>
+<p><a href="/products/edit/<%=@product.id%>">Edit Product</a></p>
+
+<form method="post" action="/products/<%= @product.id%>/sell">
+  <input type="submit" value="sell">
+  </form>

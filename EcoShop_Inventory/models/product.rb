@@ -73,8 +73,8 @@ end
 
 # # get help with this
 def sell_product()
-  sold_item = @product.find(id)
-  sold_item.quantity -= 1
+  
+  @quantity -= 1
 end
 # #
 # def low_stock
