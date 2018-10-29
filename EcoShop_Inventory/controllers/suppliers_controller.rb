@@ -37,9 +37,10 @@ post '/suppliers/:id' do
 Supplier.new(params).update()
 redirect to "/suppliers"
 end
+
 # # get help with this
-# get '/suppliers/products/:id' do
-#   id = params['id']
-#   @supplier = Supplier.products()
-#   erb(:"suppliers/products")
-# end
+get '/suppliers/products/:id' do
+  id = params['id']
+  @supplier = Supplier.products()
+  erb(:"suppliers/products")
+end

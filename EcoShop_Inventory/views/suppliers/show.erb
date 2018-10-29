@@ -1,11 +1,13 @@
 <nav>
-<ul>
-  <li><a href="/">Home</a></li><li><a href="/products">Products</a></li><li><a href="/suppliers">Suppliers</a></li>
-</ul>
+  <ul>
+    <li><a href="/">Home</a></li><li><a href="/products">Products</a></li><li><a href="/suppliers">Suppliers</a></li>
+  </ul>
 </nav>
 
 
 
 <p>Name: <%= @supplier.name %></p>
 <p>Distance: <%= @supplier.distance %></p>
-<p>Products: <%= @supplier.products() %></p>
+<p>Products:  <% @supplier.products.each do |product| %>
+  <%= product.name %>
+  <% end %>
