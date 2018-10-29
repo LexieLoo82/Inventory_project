@@ -38,9 +38,20 @@ Supplier.new(params).update()
 redirect to "/suppliers"
 end
 
-# # get help with this
 get '/suppliers/products/:id' do
   id = params['id']
   @supplier = Supplier.products()
   erb(:"suppliers/products")
+end
+
+get '/suppliers/delete/:id' do
+  id = params['id']
+  @supplier = Supplier.find(id)
+  erb(:"suppliers/delete")
+end
+
+post "/suppliers/:id/delete" do
+   supplier = Supplier.find(params[:id])
+   supplier.delete()
+   redirect to "/suppliers"
 end

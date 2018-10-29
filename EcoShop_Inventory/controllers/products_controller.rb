@@ -46,3 +46,10 @@ post "/products/:id/sell" do
   @product.update()
    redirect to "/products"
 end
+
+post "/products/delete/:id" do
+  id = params['id']
+  @product = Product.find(id)
+   @product.delete()
+   redirect to "/products"
+end

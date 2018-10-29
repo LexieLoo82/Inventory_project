@@ -1,9 +1,0 @@
-<nav>
-  <ul>
-  <li><a href="/">Home</a></li><li><a href="/suppliers">Suppliers</a></li>
-</ul>
-</nav>
-
-<% for supplier in @suppliers %>
-<p>Products: <%= supplier.products() %></p>
-<% end %>
