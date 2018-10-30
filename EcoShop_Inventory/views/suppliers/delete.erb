@@ -1,6 +1,9 @@
-<p> Warning, deleting a supplier will remove all associated products </p>
 
-
+<img src="https://cdn2.iconfinder.com/data/icons/greenline/512/warning-512.png" alt="warning sign" class="warning-sign">
+<div class="warning">
+<p> Deleting a supplier will remove all associated products! </p>
 <form method="post" action="/suppliers/<%= @supplier.id %>/delete">
-   <input type="submit" value="Delete "/>
- </form>
+   <input type="submit" value="Delete Anyway"/>
+   </form>
+   <p> Warning!</p>
+<img src="https://cdn2.iconfinder.com/data/icons/greenline/512/warning-512.png" alt="warning sign" class="warning-sign">

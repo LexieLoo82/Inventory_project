@@ -5,7 +5,23 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
 }
-ul{
+
+.warning{
+  font-size: 30px;
+  text-align: center;
+  text-shadow: -1px 0 #a7dfda, 0 1px #a7dfda, 1px 0 #a7dfda, 0 -1px #a7dfda;
+
+}
+.warning-sign{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+}
+
+/* NAV BAR */
+nav ul{
   list-style-type: none;
   background-color: #f9aa4a;
   width: 100%;
@@ -123,12 +139,3 @@ table th{
   color: green;
   font-weight: bold;
 }
-
-/* a:-webkit-any-link {
-    color: #20413d;
-    cursor: pointer;
-    text-decoration: none;
-}
-a:-webkit-any-link:hover {
-  background-color: #188E63;
-} */

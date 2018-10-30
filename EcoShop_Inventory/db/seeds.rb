@@ -24,9 +24,40 @@ product1 = Product.new({
   "quantity" => 5,
   "cost_price" => 10,
   "sell_price" => 25,
-  "supplier_id" => supplier2.id
+  "supplier_id" => supplier1.id
   })
 product1.save
+
+product2 = Product.new({
+  "name" => "Jam",
+  "type" => "kitchen",
+  "quantity" => 19,
+  "cost_price" => 2,
+  "sell_price" => 5,
+  "supplier_id" => supplier3.id
+})
+product2.save
+
+product3 = Product.new({
+"name" => "Bamboo Mug",
+"type" => "kitchen",
+"quantity" => 0,
+"cost_price" => 10,
+"sell_price" => 25,
+"supplier_id" => supplier5.id
+})
+product3.save
+
+product4 = Product.new({
+"name" => "Bamboo Mug",
+"type" => "kitchen",
+"quantity" => 5,
+"cost_price" => 10,
+"sell_price" => 25,
+"supplier_id" => supplier5.id
+})
+product4.save
+
 
 product1.type = "storage"
 product1.update

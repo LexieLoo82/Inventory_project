@@ -1,34 +1,35 @@
+<h1>Edit Product</h1>
 <nav>
 <ul>
   <li><a href="/">Home</a></li><li><a href="/products">Products</a></li><li><a href="/suppliers">Suppliers</a></li>
 </ul>
 </nav>
 
+<div class="forms">
 <form method="post" action="/products/<%= @product.id %>">
-
-<ul>
-<li> <label for="name">Name: </label>
-  <input id="name" type="text" value= "<%= @product.name %>" name="name" /></li>
-
-  <li><label for="type">Type: </label>
-  <input id="type" type="text" value= "<%= @product.type %>" name="type" /></li>
-
-  <li><label for="quantity">Quantity: </label>
-  <input id="quantity" type="text" value="<%= @product.quantity %>" name="quantity" /></li>
-
-  <li><label for="cost_price">Cost Price: </label>
-  <input id="cost_price" type="text" value="<%= @product.cost_price %>" name="cost_price" /></li>
-
-  <li><label for="sell_price">Sale Price: </label>
-  <input id="sell_price" type="text" value="<%= @product.sell_price %>" name="sell_price" /></li>
-
-  <li><label for="supplier">Select a Supplier:</label>
- <select id="supplier" name="supplier_id">
+<br>
+<label for="name">Name:<br></label>
+  <input id="name" type="text" value= "<%= @product.name %>" name="name" />
+<br>
+  <label for="type">Type: <br></label>
+  <input id="type" type="text" value= "<%= @product.type %>" name="type" />
+<br>
+  <label for="quantity">Quantity: <br></label>
+  <input id="quantity" type="text" value="<%= @product.quantity %>" name="quantity" />
+<br>
+  <label for="cost_price">Cost Price: <br></label>
+  <input id="cost_price" type="text" value="<%= @product.cost_price %>" name="cost_price" />
+<br>
+  <label for="sell_price">Sale Price:<br> </label>
+  <input id="sell_price" type="text" value="<%= @product.sell_price %>" name="sell_price" />
+<br>
+  <label for="supplier">Select a Supplier:<br></label>
+  <select id="supplier" name="supplier_id">
     <% for supplier in @suppliers %>
    <option value=<%= supplier.id %>> <%= supplier.name %> </option>
    <%end%>
- </select></li>
-
+ </select>
+<br>
   <input type="submit" value="Submit Changes"/>
-</ul>
 </form>
+</div>

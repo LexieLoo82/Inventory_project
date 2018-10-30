@@ -1,3 +1,4 @@
+<h1>Editing Supplier</h1>
 <nav>
 <ul>
   <li><a href="/">Home</a></li><li><a href="/products">Products</a></li><li><a href="/suppliers">Suppliers</a></li>
@@ -6,14 +7,12 @@
 
 <form method="post" action="/suppliers/<%= @supplier.id %>">
 
-
-  <label for="name">Name: </label>
+  <label for="name">Name: <br></label>
   <input id="name" type="text" value="<%= @supplier.name %>" name="name" />
-
-  <label for="distance">Distance: </label>
+<br>
+  <label for="distance">Distance:<br> </label>
   <input id="distance" type="text" value="<%= @supplier.distance %>"name="distance" />
-
-
+<br>
   <input type="submit" value="Submit Changes"/>
 
 </form>
