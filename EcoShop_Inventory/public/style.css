@@ -8,7 +8,7 @@ body {
 ul{
   list-style-type: none;
   background-color: #f9aa4a;
-  width: 50%;
+  width: 100%;
 }
 
 nav {
@@ -27,7 +27,7 @@ nav li a {
   text-align: center;
   padding: 8px;
   text-decoration: none;
-  width: 25%;
+  width: 30%;
 }
 li a:hover {
     background-color: #ffcc8e;

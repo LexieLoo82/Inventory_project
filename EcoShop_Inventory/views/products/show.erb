@@ -25,13 +25,13 @@
     </tr>
 
 
-<br>
+
 <p><a class="btn"href="/products/edit/<%=@product.id%>">Edit Product</a></p>
-<br>
+
 <form method="post" action="/products/delete/<%= @product.id %>">
    <input type="submit" value="Delete "/>
  </form>
-<br>
+
 <form method="post" action="/products/<%= @product.id%>/sell">
   <input type="submit" value="sell">
   </form>
