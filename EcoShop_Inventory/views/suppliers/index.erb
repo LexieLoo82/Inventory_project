@@ -1,10 +1,11 @@
+<h1> Suppliers </h1>
 <nav>
   <ul>
     <li><a href="/">Home</a></li><li><a href="/products">Products</a></li>
   </ul>
 </nav>
 
-<h1> Suppliers </h1>
+
 <p><a class="btn" href="/suppliers/new">Add Supplier</a></p>
 
 <table id="classes">
@@ -23,7 +24,7 @@
       <td><a href="/suppliers/<%=supplier.id()%>">See Supplier</td>
         <td><a href="/suppliers/edit/<%=supplier.id%>">Edit Supplier</td>
           <td><a href="/suppliers/delete/<%=supplier.id%>"> Delete Supplier</td>
-  
+
         </tr>
         <% end %>
       </table>

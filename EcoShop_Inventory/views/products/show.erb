@@ -4,21 +4,35 @@
 </ul>
 </nav>
 
+<table>
+  <tr>
+    <th> Name </th>
+    <th> Type </th>
+    <th> Quantity </th>
+    <th> Cost Price </th>
+    <th> Sale Price </th>
+    <th> Supplier </th>
+    <th> Mark up </th>
+  </tr>
+  <tr>
+    <td> <%= @product.name %></td>
+    <td> <%= @product.type %></td>
+    <td> <%= @product.quantity %></td>
+    <td> £<%= @product.cost_price %></td>
+    <td> £<%= @product.sell_price %></td>
+    <td> <%= @product.supplier.name %></td>
+    <td> £<%= @product.mark_up %></td>
+    </tr>
 
-<p>Name: <%= @product.name %></p>
-<p>Type: <%= @product.type %></p>
-<p>Quantity: <%= @product.quantity %></p>
-<p>Cost Price: £<%= @product.cost_price %></p>
-<p>Sale Price: £<%= @product.sell_price %></p>
-<p>Supplier: <%= @product.supplier.name %></p>
-<p>Mark up: £<%= @product.mark_up %></p>
 
-
-<p><a href="/products/edit/<%=@product.id%>">Edit Product</a></p>
+<br>
+<p><a class="btn"href="/products/edit/<%=@product.id%>">Edit Product</a></p>
+<br>
 <form method="post" action="/products/delete/<%= @product.id %>">
    <input type="submit" value="Delete "/>
  </form>
-
+<br>
 <form method="post" action="/products/<%= @product.id%>/sell">
   <input type="submit" value="sell">
   </form>
+</table>

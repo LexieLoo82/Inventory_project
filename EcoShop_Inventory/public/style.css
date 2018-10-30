@@ -1,9 +1,14 @@
 body {
   font-family: arial;
   font-size: 16px;
+  background: #16a66e url('/images/webpage_background.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 ul{
   list-style-type: none;
+  background-color: #f9aa4a;
+  width: 50%;
 }
 
 nav {
@@ -11,30 +16,38 @@ nav {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #f9aa4a;
+  width: 50%
 }
 
 nav li a {
-  display: block;
+  display: inline-block;
+  float: left;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 8px;
   text-decoration: none;
+  width: 25%;
 }
-
+li a:hover {
+    background-color: #ffcc8e;
+    padding: 8px 10px;
+}
 
 /*FORMS*/
 input[type=text] {
-  width: 33%;
-  padding: 10px 20px;
-  margin: 8px 0;
+  width: 50%;
+  padding: 5px 5px;
+  margin: 2px 0;
   box-sizing: border-box;
   background-color: white;
-  color: black;
+  color: #188E63;
   font-size:16px;
+  font-weight: bold;
 }
+
 input[type=text]:focus {
-  background-color: lightblue;
+  background-color: antiquewhite;
 }
 
 select {
@@ -44,8 +57,21 @@ select {
   padding: 2px 10px;
   width: 33%;
 }
-
-
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #188E63;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+}
+form {
+    font-weight: bold;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
 /* BUTTONS */
 .btn {
   background-color: #188E63;
@@ -63,12 +89,13 @@ table {
   display: table;
   font-family: Arial;
   border-collapse: collapse;
-  width: 100%;
+  width: 66%;
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
   background-color: lightgrey;
-  color: white;
+  color: #20413d;
+  opacity: 0.80;
 }
 table td, table th {
   padding: 6px;
@@ -80,9 +107,6 @@ table th{
   text-align: left;
   background-color: #188E63;
   color: white;
-}
-table th:hover {
-  background-color: #ddd;
 }
 
 .low_stock {
@@ -99,3 +123,12 @@ table th:hover {
   color: green;
   font-weight: bold;
 }
+
+/* a:-webkit-any-link {
+    color: #20413d;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:-webkit-any-link:hover {
+  background-color: #188E63;
+} */
