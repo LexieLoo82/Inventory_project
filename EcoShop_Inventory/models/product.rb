@@ -76,20 +76,26 @@ def sell_product()
 end
 #
 def low_stock()
-  if quantity <4 && quantity >1
+  if @quantity <= 4 && @quantity >1
     return "Low Stock"
   end
 end
 
 def no_stock()
-  if quantity == 0
+  if @quantity == 0
     return "Out of Stock"
+  end
+end
+
+def adequate_stock()
+  if @quantity >=5
+    return "Sufficient Stock"
   end
 end
 
 
 def mark_up
-result = sell_price - cost_price
+result = @sell_price - @cost_price
 return result
 end
 

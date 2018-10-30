@@ -6,7 +6,7 @@ ul{
   list-style-type: none;
 }
 
-nav  {
+nav {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -38,11 +38,11 @@ input[type=text]:focus {
 }
 
 select {
-    color: black;
-    background: white;
-    font-size: 16px;
-    padding: 2px 10px;
-    width: 33%;
+  color: black;
+  background: white;
+  font-size: 16px;
+  padding: 2px 10px;
+  width: 33%;
 }
 
 
@@ -55,4 +55,47 @@ select {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+
+/*  TABLES */
+table {
+  display: table;
+  font-family: Arial;
+  border-collapse: collapse;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: lightgrey;
+  color: white;
+}
+table td, table th {
+  padding: 6px;
+  border: 1px solid #ddd;
+}
+table th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #188E63;
+  color: white;
+}
+table th:hover {
+  background-color: #ddd;
+}
+
+.low_stock {
+  color: orange;
+  font-weight: bold;
+}
+
+.no_stock {
+  color: red;
+  font-weight: bold;
+}
+
+.ok_stock {
+  color: green;
+  font-weight: bold;
 }

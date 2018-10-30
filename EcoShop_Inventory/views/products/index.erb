@@ -4,25 +4,26 @@
 </ul>
 </nav>
 
-<h1> products </h1>
+<head> products </head>
+<body>
 <p><a class="btn" href="/products/new">Add Product</a></p>
 <table>
   <tr>
-  <th>Name</th>
-  <th></th>
-  <th>Quantity</th>
-  <th></th>
-  <th></th>
+    <th>Name</th>
+    <th>Quantity</th>
+    <th>Stock Indicator</th>
+    <th>Product Details</th>
   </tr>
 <% for product in @products  %>
 <tr>
 <td><p><%= product.name() %></p></td>
-<td>|</td>
 <td><p> <%= product.quantity() %></p></td>
-<td>|</td>
-<td><div class="low_stock"><p> <%= product.low_stock %></p></div></td>
-<td><div class="no_stock"><p><%= product.no_stock %></p></div></td>
+<td>
+  <div class="low_stock"><p> <%= product.low_stock %></p></div>
+  <div class="no_stock"><p><%= product.no_stock %></p></div>
+  <div class="ok_stock"><p><%= product.adequate_stock %></p></div>
+</td>
 <td><p><a href="/products/<%=product.id%>">See Product</a></p></td>
-<td></td>
 <% end %>
 </table>
+</body>

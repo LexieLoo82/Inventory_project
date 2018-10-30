@@ -1,26 +1,29 @@
 <nav>
-<ul>
-  <li><a href="/">Home</a></li><li><a href="/products">Products</a></li>
-</ul>
+  <ul>
+    <li><a href="/">Home</a></li><li><a href="/products">Products</a></li>
+  </ul>
 </nav>
 
 <h1> Suppliers </h1>
 <p><a class="btn" href="/suppliers/new">Add Supplier</a></p>
-<table>
+
+<table id="classes">
   <tr>
     <th>Name</th>
-    <th></th>
     <th>Distance</th>
-    </tr>
-<% for supplier in @suppliers %>
-<tr>
-  <td><p><%= supplier.name() %></p></td>
-  <td>|</td>
-  <td><p> <%= supplier.distance() %>km</p></td>
-  <td>|</td>
-  <td><a href="/suppliers/<%=supplier.id()%>">See Supplier</a></td>
-  <td><a href="/suppliers/edit/<%=supplier.id%>">Edit Supplier</a></td>
-  <td><a href="/suppliers/delete/<%=supplier.id%>"> Delete Supplier</a> </td>
-</tr>
-<% end %>
-</table>
+    <th>View</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <% for supplier in @suppliers %>
+  <tr>
+    <td><%= supplier.name()%></td>
+    <td><%= supplier.distance()%>km</td>
+
+      <td><a href="/suppliers/<%=supplier.id()%>">See Supplier</td>
+        <td><a href="/suppliers/edit/<%=supplier.id%>">Edit Supplier</td>
+          <td><a href="/suppliers/delete/<%=supplier.id%>"> Delete Supplier</td>
+  
+        </tr>
+        <% end %>
+      </table>
