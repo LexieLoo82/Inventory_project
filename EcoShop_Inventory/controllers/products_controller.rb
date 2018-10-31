@@ -44,7 +44,7 @@ post "/products/:id/sell" do
   @product = Product.find(id)
   @product.sell_product()
   @product.update()
-   redirect to "/products"
+   redirect to "/products/#{id}"
 end
 
 post "/products/delete/:id" do

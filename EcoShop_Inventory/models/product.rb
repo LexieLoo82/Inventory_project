@@ -82,7 +82,7 @@ def low_stock()
 end
 
 def no_stock()
-  if @quantity == 0
+  if @quantity <= 0
     return "Out of Stock"
   end
 end
